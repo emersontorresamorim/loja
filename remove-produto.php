@@ -4,7 +4,7 @@
 	include("banco-produto.php"); 
 ?>
 <?php
-	$id = $_GET['id'];
+	$id = $_POST['id'];
 	removerProduto($conexao, $id);
 	header("Location: produto-lista.php?removido=true");
 	die();

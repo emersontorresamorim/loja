@@ -11,8 +11,8 @@
 	}
 
 
-	function gravarProduto($conexao, $nome, $preco) {
-		$query = "INSERT INTO produto (nome, preco) VALUES ('{$nome}', {$preco})";
+	function gravarProduto($conexao, $nome, $preco, $descricao) {
+		$query = "INSERT INTO produto (nome, preco, descricao) VALUES ('{$nome}', {$preco}, '{$descricao}')";
 		return mysqli_query($conexao, $query);
 	}
 

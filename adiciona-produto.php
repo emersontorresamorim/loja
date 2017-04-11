@@ -4,10 +4,11 @@
 	include("banco-produto.php"); 
 ?>	
 <?php 
-	$nome = $_GET['nome'];
-	$preco = $_GET['preco'];
+	$nome = $_POST['nome'];
+	$preco = $_POST['preco'];
+	$descricao = $_POST['descricao'];
 
-	if (gravarProduto($conexao, $nome, $preco)) { 
+	if (gravarProduto($conexao, $nome, $preco, $descricao)) { 
 ?>
 		<p class="text-success">O Produto <?= $nome; ?>, no valor de <?= $preco; ?> adicionado com sucesso.</p>
 <?php 
