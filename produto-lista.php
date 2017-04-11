@@ -29,7 +29,7 @@
 				<td><?= $produto['nome']; ?></td>			
 				<td><?= $produto['preco']; ?></td>
 				<td>
-					<a class="text-danger" href="remove-produto.php?id=<?= $produto['id'] ?>">Remover</a>
+					<a class="btn btn-danger" href="remove-produto.php?id=<?= $produto['id'] ?>">Remover</a>
 				</td>
 			</tr>
 		</tbody>

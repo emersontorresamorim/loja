@@ -8,4 +8,3 @@
 	removerProduto($conexao, $id);
 	header("Location: produto-lista.php?removido=true");
 	die();
-?>
