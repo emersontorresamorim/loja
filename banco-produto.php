@@ -17,7 +17,21 @@
 	}
 
 
+	function atualizarProduto($conexao, $id, $nome, $preco, $descricao, $categoria_id, $usado) {
+		$query = "UPDATE produto SET nome = '{$nome}', preco = {$preco}, descricao = '{$descricao}', categoria_id = {$categoria_id}, usado = {$usado} 
+				  WHERE id = {$id}";
+		return mysqli_query($conexao, $query);
+	}
+
+
 	function removerProduto($conexao, $id) {
 		$query = "DELETE FROM produto WHERE id = {$id}";
 		return mysqli_query($conexao, $query);
+	}
+
+
+	function buscarProduto($conexao, $id) {
+		$query = "SELECT * FROM produto WHERE id = {$id}";
+		$resultado = mysqli_query($conexao, $query);
+		return mysqli_fetch_assoc($resultado);
 	}

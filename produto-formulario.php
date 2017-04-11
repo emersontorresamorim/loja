@@ -36,7 +36,7 @@
 				</td>
 			</tr>
 			<tr>
-				<td><button class="btn btn-primary" type="submit">Gravar</button></td>
+				<td><button class="btn btn-success" type="submit">Cadastrar</button></td>
 			</tr>
 		</table>
 	</form>
