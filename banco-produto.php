@@ -2,7 +2,7 @@
 
 	function listarProdutos($conexao) {
 		$produtos = [];
-		$query = "SELECT * FROM produto";
+		$query = "SELECT p.*, c.nome AS categoria_nome FROM produto AS p JOIN categoria AS c ON p.categoria_id = c.id";
 		$resultado = mysqli_query($conexao, $query);
 		while ($produto = mysqli_fetch_assoc($resultado)) {
 			array_push($produtos, $produto);
@@ -11,8 +11,8 @@
 	}
 
 
-	function gravarProduto($conexao, $nome, $preco, $descricao) {
-		$query = "INSERT INTO produto (nome, preco, descricao) VALUES ('{$nome}', {$preco}, '{$descricao}')";
+	function gravarProduto($conexao, $nome, $preco, $descricao, $categoria_id, $usado) {
+		$query = "INSERT INTO produto (nome, preco, descricao, categoria_id, usado) VALUES ('{$nome}', {$preco}, '{$descricao}', {$categoria_id}, {$usado})";
 		return mysqli_query($conexao, $query);
 	}
 
