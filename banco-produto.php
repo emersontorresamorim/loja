@@ -1,4 +1,5 @@
 <?php
+
 	function listarProdutos($conexao) {
 		$produtos = [];
 		$query = "SELECT * FROM produto";
@@ -9,7 +10,14 @@
 		return $produtos;
 	}
 
+
 	function gravarProduto($conexao, $nome, $preco) {
 		$query = "INSERT INTO produto (nome, preco) VALUES ('{$nome}', {$preco})";
+		return mysqli_query($conexao, $query);
+	}
+
+
+	function removerProduto($conexao, $id) {
+		$query = "DELETE FROM produto WHERE id = {$id}";
 		return mysqli_query($conexao, $query);
 	}
