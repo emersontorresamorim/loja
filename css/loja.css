@@ -2,8 +2,12 @@ body {
 	padding-top: 50px; 
 }
 
+h1, h2 {
+	padding-bottom: 30px;
+}
+
 .principal {
-	padding: 40px 15px;
+	padding: 40px 50px;
 	text-align: center;
 }
 
