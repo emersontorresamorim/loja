@@ -3,6 +3,7 @@
 	include("conectar-db.php"); 
 	include("banco-categoria.php");
 	include("banco-produto.php");
+	include("controle-acesso.php");
 
 	validarUsuario();  
 

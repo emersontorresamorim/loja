@@ -1,12 +1,13 @@
 <?php
+	session_start();
 	
 	function isUsuarioLogado() {
-		return isset($_COOKIE['usuario_logado']);
+		return isset($_SESSION['usuario_logado']);
 	}
 
 
 	function getUsuarioLogado() {
-		return $_COOKIE["usuario_logado"];
+		return $_SESSION["usuario_logado"];
 	}
 
 
@@ -19,5 +20,10 @@
 
 
 	function fazLogin($email) {
-		setcookie("usuario_logado", $email, time() + 60);
+		$_SESSION['usuario_logado'] = $email;
+	}
+
+
+	function fazLogout() {
+		session_destroy();
 	}

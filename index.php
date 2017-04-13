@@ -25,9 +25,19 @@
 	?>
 
 	<?php
+		if (isset($_GET['logout']) && $_GET['logout'] == true) {
+	?>
+			<p class="alert-success">Usuário deslogado com sucesso.</p>
+	<?php
+		}
+	?>
+
+	<?php
 		if (isUsuarioLogado()) {
 	?>
-			<p class="text-success">Você está logado como: <?= getUsuarioLogado() ?></p>
+			<p class="text-success">Você está logado como: <?= getUsuarioLogado() ?>
+				<a href="logout.php">Logout</a>
+			</p>
 	<?php
 		} else {
 	?>		
