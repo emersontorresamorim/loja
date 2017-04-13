@@ -1,5 +1,6 @@
 <?php 
-	include("cabecalho.php"); 
+	include("cabecalho.php");
+	include("controle-acesso.php"); 
 ?>
 	<h1>Bem vindo ao Controle de Produtos!</h1>
 
@@ -16,9 +17,17 @@
 	?>
 
 	<?php
-		if (isset($_COOKIE['usuario_logado'])) {
+		if (isset($_GET['falhaSeguranca']) && $_GET['falhaSeguranca'] == true) {
 	?>
-			<p class="text-success">Você está logado como: <?= $_COOKIE["usuario_logado"] ?></p>
+			<p class="alert-danger">Você não tem acesso a esta página.</p>
+	<?php
+		}
+	?>
+
+	<?php
+		if (isUsuarioLogado()) {
+	?>
+			<p class="text-success">Você está logado como: <?= getUsuarioLogado() ?></p>
 	<?php
 		} else {
 	?>		

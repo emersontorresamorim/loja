@@ -2,7 +2,9 @@
 	include("cabecalho.php"); 
 	include("conectar-db.php"); 
 	include("banco-categoria.php");
-	include("banco-produto.php");  
+	include("banco-produto.php");
+
+	validarUsuario();  
 
 	$id = $_GET['id'];
 	$produto = buscarProduto($conexao, $id);

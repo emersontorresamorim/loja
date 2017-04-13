@@ -2,6 +2,9 @@
 	include("cabecalho.php"); 
 	include("conectar-db.php"); 
 	include("banco-categoria.php");   
+	include("controle-acesso.php");
+
+	validarUsuario();
 
 	$categorias = listarCategorias($conexao);
 ?>

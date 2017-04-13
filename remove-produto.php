@@ -2,6 +2,8 @@
 	include("cabecalho.php"); 
 	include("conectar-db.php"); 
 	include("banco-produto.php"); 
+
+	validarUsuario();
 ?>
 <?php
 	$id = $_POST['id'];
