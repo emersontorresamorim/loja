@@ -1,3 +1,7 @@
+<?php
+	error_reporting(E_ALL ^ E_NOTICE);
+	include("controle-mensagens.php");
+?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -22,3 +26,7 @@
 		</div>
 		<div class="container">
 			<div class="principal">
+<?php 
+	exibirMensagem("success");
+	exibirMensagem("danger"); 
+?>

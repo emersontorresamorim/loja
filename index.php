@@ -1,26 +1,8 @@
 <?php 
 	include("cabecalho.php");
-	include("controle-acesso.php"); 
+	include("controle-acesso.php");
 ?>
 	<h1>Bem vindo ao Controle de Produtos!</h1>
-
-	<?php
-		if (isset($_SESSION['danger'])) {
-	?>
-			<p class="alert-danger"><?= $_SESSION['danger'] ?></p>
-	<?php
-			unset($_SESSION['danger']);
-		}
-	?>
-
-	<?php
-		if (isset($_SESSION['success'])) {
-	?>
-			<p class="alert-success"><?= $_SESSION['success'] ?></p>
-	<?php
-			unset($_SESSION['success']);
-		}
-	?>
 
 	<?php
 		if (isUsuarioLogado()) {
