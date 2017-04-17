@@ -1,5 +1,6 @@
 <?php
 	include("controle-acesso.php"); 
 	fazLogout();
-	header("Location: index.php?logout=true");
+	$_SESSION['success'] = "Usuário deslogado com sucesso.";
+	header("Location: index.php");
 	die();

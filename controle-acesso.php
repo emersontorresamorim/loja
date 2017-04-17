@@ -13,7 +13,8 @@
 
 	function validarUsuario() {
 		if (!isUsuarioLogado()) {
-			header("Location: index.php?falhaSeguranca=true");
+			$_SESSION['danger'] = "Você não tem acesso a esta página.";
+			header("Location: index.php");
 			die();
 		}
 	}
@@ -26,4 +27,5 @@
 
 	function fazLogout() {
 		session_destroy();
+		session_start();
 	}

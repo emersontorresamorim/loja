@@ -5,30 +5,20 @@
 	<h1>Bem vindo ao Controle de Produtos!</h1>
 
 	<?php
-		if (isset($_GET['login']) && $_GET['login'] == true) {
+		if (isset($_SESSION['danger'])) {
 	?>
-			<p class="alert-success">Logado com sucesso.</p>
+			<p class="alert-danger"><?= $_SESSION['danger'] ?></p>
 	<?php
-		} else if (isset($_GET['login']) && $_GET['login'] == false) {
-	?>
-			<p class="alert-danger">Usuário ou Senha inválida.</p>
-	<?php
+			unset($_SESSION['danger']);
 		}
 	?>
 
 	<?php
-		if (isset($_GET['falhaSeguranca']) && $_GET['falhaSeguranca'] == true) {
+		if (isset($_SESSION['success'])) {
 	?>
-			<p class="alert-danger">Você não tem acesso a esta página.</p>
+			<p class="alert-success"><?= $_SESSION['success'] ?></p>
 	<?php
-		}
-	?>
-
-	<?php
-		if (isset($_GET['logout']) && $_GET['logout'] == true) {
-	?>
-			<p class="alert-success">Usuário deslogado com sucesso.</p>
-	<?php
+			unset($_SESSION['success']);
 		}
 	?>
 

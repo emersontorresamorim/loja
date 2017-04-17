@@ -9,12 +9,14 @@
 	<h1>Lista de Produtos</h1>
 
 	<?php
-		if (array_key_exists('removido', $_GET) && $_GET['removido'] == true) {
+		if (isset($_SESSION['success'])) {
 	?>
-			<p class="text-success">Produto removido com sucesso.</p>
+			<p class="alert-success"><?= $_SESSION['success'] ?></p>
 	<?php
+			unset($_SESSION['success']);
 		}
 	?>
+	
 	<table class="table table-striped table-bordered">
 		<thead>
 			<tr>
