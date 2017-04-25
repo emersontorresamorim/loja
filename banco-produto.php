@@ -1,4 +1,5 @@
 <?php
+	require_once("conectar-db.php");
 
 	function listarProdutos($conexao) {
 		$produtos = [];

@@ -1,6 +1,6 @@
 <?php 
-	include("cabecalho.php");
-	include("controle-acesso.php");
+	require_once("cabecalho.php");
+	require_once("controle-acesso.php");
 ?>
 	<h1>Bem vindo ao Controle de Produtos!</h1>
 

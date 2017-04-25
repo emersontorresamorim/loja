@@ -1,4 +1,5 @@
 <?php
+	require_once("conectar-db.php");
 	
 	function buscarUsuario($conexao, $email, $senha) {
 		$senhaMd5 = md5($senha);

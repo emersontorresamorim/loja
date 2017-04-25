@@ -1,7 +1,6 @@
 <?php
-	include("conectar-db.php"); 
-	include("banco-usuario.php");
-	include("controle-acesso.php");
+	require_once("banco-usuario.php");
+	require_once("controle-acesso.php");
 
 	$email = $_POST['email'];
 	$senha = $_POST['senha'];

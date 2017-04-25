@@ -1,6 +1,6 @@
 <?php
 	error_reporting(E_ALL ^ E_NOTICE);
-	include("controle-mensagens.php");
+	require_once("controle-mensagens.php");
 ?>
 <!DOCTYPE html>
 <html>
@@ -19,7 +19,8 @@
 				<div>
 					<ul class="nav navbar-nav">
 						<li><a href="produto-formulario.php">Cadastrar Produto</a></li>
-						<li><a href="produto-lista">Listar Produtos</a></li>
+						<li><a href="produto-lista.php">Listar Produtos</a></li>
+						<li><a href="contato.php">Contato</a></li>
 					</ul>
 				</div>
 			</div>

@@ -1,9 +1,8 @@
 <?php 
-	include("cabecalho.php"); 
-	include("conectar-db.php"); 
-	include("banco-categoria.php");
-	include("banco-produto.php");
-	include("controle-acesso.php");
+	require_once("cabecalho.php");
+	require_once("banco-categoria.php");
+	require_once("banco-produto.php");
+	require_once("controle-acesso.php");
 
 	validarUsuario();  
 
