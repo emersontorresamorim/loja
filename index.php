@@ -18,7 +18,7 @@
 				<table class="table">
 					<tr>
 						<td>Email:</td>
-						<td><input class="form-control" type="text" name="email"></td>
+						<td><input class="form-control" type="email" name="email"></td>
 					</tr>
 					<tr>
 						<td>Senha:</td>

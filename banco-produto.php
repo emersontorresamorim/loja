@@ -12,12 +12,18 @@
 
 
 	function gravarProduto($conexao, $nome, $preco, $descricao, $categoria_id, $usado) {
+		$nome = mysqli_real_escape_string($conexao, $nome);
+		$preco = mysqli_real_escape_string($conexao, $preco);
+		$descricao = mysqli_real_escape_string($conexao, $descricao);
 		$query = "INSERT INTO produto (nome, preco, descricao, categoria_id, usado) VALUES ('{$nome}', {$preco}, '{$descricao}', {$categoria_id}, {$usado})";
 		return mysqli_query($conexao, $query);
 	}
 
 
 	function atualizarProduto($conexao, $id, $nome, $preco, $descricao, $categoria_id, $usado) {
+		$nome = mysqli_real_escape_string($conexao, $nome);
+		$preco = mysqli_real_escape_string($conexao, $preco);
+		$descricao = mysqli_real_escape_string($conexao, $descricao);
 		$query = "UPDATE produto SET nome = '{$nome}', preco = {$preco}, descricao = '{$descricao}', categoria_id = {$categoria_id}, usado = {$usado} 
 				  WHERE id = {$id}";
 		return mysqli_query($conexao, $query);
